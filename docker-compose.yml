@@ -27,5 +27,5 @@ networks:
       driver: bridge
 
 volumes:
-    postgdres:
+    postgres:
       driver: local

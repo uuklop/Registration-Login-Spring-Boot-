@@ -51,10 +51,11 @@ public class EmailService {
         properties.put("confirmationUrl", confirmationUrl);
         properties.put("activation_code", activationCode);
 
-        Context context  = new Context();
-        context.setVariable("properties", properties);
+        Context context = new Context();
+        context.setVariables(properties);
 
-        helper.setFrom("contact@jamespolkuudery@gmail.com");
+
+        helper.setFrom("jamespolkuudery@gmail.com");
         helper.setTo(to);
         helper.setSubject(subject);
 
@@ -63,7 +64,6 @@ public class EmailService {
         helper.setText(template, true);
 
         mailSender.send(mimeMessage);
-
 
 
 
